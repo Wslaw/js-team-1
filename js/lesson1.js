@@ -40,3 +40,41 @@
 // hours = String(hours).padStart(2, "0");
 // minutes = String(minutes).padStart(2, "0");
 // console.log(`${hours}:${minutes}`);
+
+
+// ---------------------------------
+
+
+//Напишіть цикл, який виводить в консоль
+//числа от max до min по зменьшенню
+//Виведіть в консоль суму усіх парних чисел
+
+
+// const max = 10;
+// const min = 3;
+
+// let total = 0
+// for (let i = max; i >= min; i -= 1) {
+//     console.log(i)
+//     if (i % 2 === 0){
+//         total +=i
+//     }
+// }
+// console.log(total)
+
+
+// function numberTotal(max, min) {
+//     let total = 0
+//
+//     for (let i = max; i >= min; i -= 1) {
+//         console.log(i)
+//
+//         if (i % 2 === 0) {
+//             total += i
+//         }
+//     }
+//
+//     return total
+// }
+//  console.log(numberTotal(10, 3))
+
