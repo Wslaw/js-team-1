@@ -85,55 +85,71 @@
 // значення '1', то у змінну result запишемо 'зима', якщо має значення
 // '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
 
-const num = prompt('Enter number from 1 to 4');
-let result = '';
+// const num = prompt('Enter number from 1 to 4');
+// let result = '';
 
-switch (num) {
-    case '1':
-        result = 'зима'
-        break;
+// switch (num) {
+//     case '1':
+//         result = 'зима'
+//         break;
     
-     case '2':
-        result = 'весна'
-        break;
+//      case '2':
+//         result = 'весна'
+//         break;
     
-     case '3':
-        result = 'літо'
-        break;
+//      case '3':
+//         result = 'літо'
+//         break;
 
-     case '4':
-        result = 'осінь'
-        break;
+//      case '4':
+//         result = 'осінь'
+//         break;
 
-    default:
-        result = 'Enter number from 1 to 4';
-}
+//     default:
+//         result = 'Enter number from 1 to 4';
+// }
 
-alert(result);
+// alert(result);
 
-function chekNumber(num) {
-    let result = '';
+// function chekNumber(num) {
+//     let result = '';
 
-switch (num) {
-    case '1':
-        result = 'зима'
-        break;
+// switch (num) {
+//     case '1':
+//         result = 'зима'
+//         break;
     
-     case '2':
-        result = 'весна'
-        break;
+//      case '2':
+//         result = 'весна'
+//         break;
     
-     case '3':
-        result = 'літо'
-        break;
+//      case '3':
+//         result = 'літо'
+//         break;
 
-     case '4':
-        result = 'осінь'
-        break;
+//      case '4':
+//         result = 'осінь'
+//         break;
 
-    default:
-        result = 'Enter number from 1 to 4';
-    }
-    return result;
-}
-console.log(chekNumber('2'));
+//     default:
+//         result = 'Enter number from 1 to 4';
+//     }
+//     return result;
+// }
+// console.log(chekNumber('2'));
+
+
+// ==========================================================
+// Переверни рядок у зворотньому порядку
+// const string = "Hello";
+
+// const string = "Hello";
+// let newString = "";
+// for (let index = string.length-1; index >= 0; index -= 1) {
+//     const element = string[index];
+//     console.log(element);
+//     // newString = newString + element;
+//     newString += element;
+    
+// }
+// console.log(newString);
