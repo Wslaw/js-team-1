@@ -103,3 +103,28 @@
 // }
 
 // console.log(calcTotalPrice(stones, "Сапфір"));
+
+//4. Створіть об'єкт calculator з трьомя методами
+//read(a, b) - приймає два аргумента і зберігає їх
+//як властивості об'єкта
+//sum() повертає сумму збереженних значень (з перевіркою на наявніст властивостей в об'єкті)
+//mult() перемножає збереженні значення і повертає результат
+// const calculator = {
+//     read(a, b) {
+//         this.value1 = a;
+//         this.value2 = b;
+//     },
+//     sum() {
+//         return !this.value1 || !this.value2
+//             ? "Немає потрібних властивостей"
+//             : this.value1 + this.value2;
+//     },
+//     mult() {
+//         return !this.value1 || !this.value2
+//             ? "Немає потрібних властивостей"
+//             : this.value1 * this.value2;
+//     },
+// };
+// calculator.read(4);
+// console.log(calculator.sum());
+// console.log(calculator.mult());
