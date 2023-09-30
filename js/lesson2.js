@@ -170,3 +170,117 @@
 // }
 
 // makeProduct("me", 456, showProduct);
+// !=============================================================
+// //5. Напишіть скрипт керування особистим кабінетом інтернет банка
+// //Є об'єкт account в якому необхідно реалізувати
+// //методи для работи з балансом та історією транзакцій
+
+// //Типів транзакцій всього два.
+// //Можна покласти або зняти гроші з рахунка
+// const Transaction = {
+//     DEPOSIT: "deposit",
+//     WITHDRAW: "withdraw",
+// };
+
+// //Кожна транзакція це об'єкт з властивостями id, type, amount
+
+// const account = {
+//     //поточний баланс рахунка
+//     balance: 0,
+
+//     //Історія транзакцій
+//     transactions: [],
+
+//     //Метод створює і повертає об'єкт транзакцій
+//     //Приймає сумму і тип транзакцій
+//     createTransaction(type, amount) {
+//         return {
+//             type,
+//             amount,
+//         };
+//     },
+
+//     //Метод відповідає за додавання сумми к балансу.
+//     //Приймає сумму транзакціи.
+//     //Визиває createTransaction для створення об'єкта транзакціи
+//     //після чого додає його в історію транзакцій
+//     deposit(amount) {
+//         this.balance += amount;
+//         const transact = this.createTransaction(
+//             Transaction.DEPOSIT,
+//             amount
+//         );
+//         this.transactions.push({
+//             ...transact,
+//             id: Math.random(),
+//         });
+//     },
+//     //Метод відповідає за зняття сумми з балансу.
+//     //Приймає сумму транзакціи.
+//     //Визиває createTransaction для створення об'єкта транзакціи
+//     //після чого додає йогого в історю транзакцій
+//     //Якщо amount більше ніж поточний баланс, виводимо повідомлення про те,
+//     //що недостатньо коштів на рахунку
+//     withdraw(amount) {
+//         if (amount > this.balance) {
+//             return alert("Недостатньо коштів");
+//         }
+//         this.balance -= amount;
+//         const transact = this.createTransaction(
+//             Transaction.WITHDRAW,
+//             amount
+//         );
+//         this.transactions.push({
+//             ...transact,
+//             id: Math.random(),
+//         });
+//     },
+
+//     //Метод повертає поточний баланс
+//     getBalance() {
+//         return `На вашому рахунку ${this.balance} грошей.`;
+//     },
+//     //Метод шукає і повертає об'єкт транзакціи по id
+//     getTransactionDetails(id) {
+//         const transact = this.transactions.find(
+//             (element) => element.id === id
+//         );
+//         return transact || "транзакція не знайдена";
+//     },
+//     //Метод повертає кількіств коштів вказаного типу
+//     //транзакціи зі всієї історії транзакцій
+//     getTransactionType(type) {
+//         return this.transactions
+//             .filter((transact) => transact.type === type)
+//             .reduce(
+//                 (sum, element) => element.amount + sum,
+//                 0
+//             );
+//     },
+// };
+// account.deposit(1300);
+// account.withdraw(500);
+// account.deposit(400);
+// // console.log(account.getTransactionDetails(1));
+// console.log(
+//     account.getTransactionType(Transaction.DEPOSIT)
+// );
+// console.log(account.getBalance());
+
+// !==============Hom work==========================
+// 6. Створіть телефонну книгу - об'єкт phonebook,
+// у якого є властивість contacts (список контактів)
+// та методи управління книгою:
+// add(data) - приймає об'єкт data, де зберігається
+// name, email, list, id, createdAt (id та createdAt
+// генеруються відповідними методами:
+//   generateId() {
+//     return "#" + Math.random().toString(36).substr(2, 9);
+//   },
+//   getDate() {
+//     return Date.now();
+//   },);
+// list() - повертає список контактів у вигляді таблиці;
+// delete(name) - видаляє знайденний контакт
+// updateName(oldName, newName) - змінює ім'я контакта
+// filtered(category) - фільтрує список контактів відповідної категорії (друзі, робота, і т.д.)
