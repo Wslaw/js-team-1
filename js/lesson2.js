@@ -128,3 +128,24 @@
 // calculator.read(4);
 // console.log(calculator.sum());
 // console.log(calculator.mult());
+//-------------------------------------------------------------
+
+//1. Напишіть дві функції
+// letMeSeeYourName(callback) - питає ім'я користувача
+//через prompt и викликає callback функцію
+//greet(name) - коллбек, якій приймає ім'я та логірує в консоль
+//рядок "Привіт, <name>"
+//Реалізуй перевірку, що prompt не пустий
+// якщо пустий - додай дефолтне значення
+
+function letMeSeeYourName(callback) {
+    let name = prompt("Введи своє імя:");
+    if (!name) name = 'Анонім';
+    callback(name);
+}
+
+function greet(name) {
+    console.log(`Привіт ${name}`);
+}
+
+letMeSeeYourName(greet);
