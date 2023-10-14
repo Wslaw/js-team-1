@@ -129,55 +129,103 @@
 //Додай методи addNote(note), removeNote(noteText)
 //updatePriority(noteText, newPriority)
 
-class Notes {
-    static Priority = {
-        HIGHT: "hight",
-        MIDDLE: "middle",
-        LOW: "low",
-    };
-    constructor() {
-        this.items = [];
-    }
-    addNote(note) {
-        this.items.push(note);
-    }
-    removeNote(noteText) {
-        // const index = this.items.findIndex(
-        //     (item) => item.text === noteText
-        // );
-        // if (index === -1) return alert("Not found");
-        // this.items.splice(index, 1);
-        this.items = this.items.filter(
-            (item) => item.text !== noteText
-        );
-    }
-    updatePriority(noteText, newPriority) {
-        // const index = this.items.findIndex(
-        //     (item) => item.text === noteText
-        // );
-        // if (index === -1) return alert("Not found");
-        // this.items[index].priority = newPriority;
-        const item = this.items.find(
-            (item) => item.text === noteText
-        );
-        if (!item) return alert("Not found");
-        item.priority = newPriority;
-    }
-}
+// class Notes {
+//     static Priority = {
+//         HIGHT: "hight",
+//         MIDDLE: "middle",
+//         LOW: "low",
+//     };
+//     constructor() {
+//         this.items = [];
+//     }
+//     addNote(note) {
+//         this.items.push(note);
+//     }
+//     removeNote(noteText) {
+//         // const index = this.items.findIndex(
+//         //     (item) => item.text === noteText
+//         // );
+//         // if (index === -1) return alert("Not found");
+//         // this.items.splice(index, 1);
+//         this.items = this.items.filter(
+//             (item) => item.text !== noteText
+//         );
+//     }
+//     updatePriority(noteText, newPriority) {
+//         // const index = this.items.findIndex(
+//         //     (item) => item.text === noteText
+//         // );
+//         // if (index === -1) return alert("Not found");
+//         // this.items[index].priority = newPriority;
+//         const item = this.items.find(
+//             (item) => item.text === noteText
+//         );
+//         if (!item) return alert("Not found");
+//         item.priority = newPriority;
+//     }
+// }
 
-const notes = new Notes();
-notes.addNote({
-    text: "Hello",
-    priority: Notes.Priority.LOW,
-});
-notes.addNote({
-    text: "Bye",
-    priority: Notes.Priority.MIDDLE,
-});
-notes.addNote({
-    text: "Red",
-    priority: Notes.Priority.HIGHT,
-});
-notes.removeNote("By");
-notes.updatePriority("By", Notes.Priority.LOW);
-console.log(notes);
+// const notes = new Notes();
+// notes.addNote({
+//     text: "Hello",
+//     priority: Notes.Priority.LOW,
+// });
+// notes.addNote({
+//     text: "Bye",
+//     priority: Notes.Priority.MIDDLE,
+// });
+// notes.addNote({
+//     text: "Red",
+//     priority: Notes.Priority.HIGHT,
+// });
+// notes.removeNote("By");
+// notes.updatePriority("By", Notes.Priority.LOW);
+// console.log(notes);
+//----------------------------------------------------------------------------------------------
+
+// 4. Створити клас Worker, у якого є властивості name, age, salary.
+//У класу Worker є метод getSalary, який повертає повідомлення
+//"Worker <name> has salary <salary> dollars"
+//Створити клас TopLevelWorker, у якого є властивість position
+//і який успадковує клас Worker, додаючи метод getPosition
+// який повертає повідомлення "<name> works as <position>"
+
+// class Worker {
+//     constructor(name, age, salary) {
+//         this.name = name;
+//         this.age = age;
+//         this.salary = salary;
+            
+//     }
+//     getSalary() {
+//     console.log(`Worker ${this.name} has salary ${this.salary} dollars`);
+// }
+
+    
+// };
+
+// class TopLevelWorker extends Worker {
+//     constructor(name, age, salary, position) {
+//         super(name, age, salary);
+//         this.position = position;
+//     }
+//     getPosition() {
+//         console.log(`${this.name} works as ${this.position}`);
+//     }
+// };
+
+// const red = new TopLevelWorker("Ivan", 25, 2500, "manager");
+// console.log(red);
+
+// red.getSalary();
+
+
+
+//--------------------------------------------------------------------------------
+//  Написати клас, який буде представляти зоопарк тварин.
+//  Створити загальний клас Animal для тварин.
+// У зоопарку повинні бути різні типи тварин, такі як ссавці, птахи, рептилії тощо.
+// Кожен тип тварин повинен мати свої властивості та методи, наприклад,
+//  методи для отримання інформації про тварину та для годівлі тварин.
+//  Крім того, зоопарк повинен мати метод для додавання тварин до списку та
+// метод для виведення списку всіх тварин у зоопарку.
