@@ -43,17 +43,74 @@
 і кнопка набуває початкового вигляду.
 */
 
-const input = document.querySelector("#passwordInput");
-const button = document.querySelector("#passwordButton");
+// const input = document.querySelector("#passwordInput");
+// const button = document.querySelector("#passwordButton");
 
-button.addEventListener("click", handler);
+// button.addEventListener("click", handler);
 
-function handler() {
-    if (button.textContent === "Розкрити") {
-        button.textContent = "Приховати";
-        input.style.color = "inherit";
-    } else {
-        button.textContent = "Розкрити";
-        input.style.color = "transparent";
-    }
+// function handler() {
+//     if (button.textContent === "Розкрити") {
+//         button.textContent = "Приховати";
+//         input.style.color = "inherit";
+//     } else {
+//         button.textContent = "Розкрити";
+//         input.style.color = "transparent";
+//     }
+// }
+// ******************************************
+
+// Створити невелику гру
+// Спочатку на екрані з'являється якась фігура рандомного коліру в рандомному місті
+// Натискаючі на фігуру, вона змінює свою форму, колір, місце розташування
+
+// const forms = [
+//   "width: 100px; height: 100px; border-width: 1px;",
+//   "width: 100px; height: 100px; border-radius: 50%;",
+//   "width: 150px; height: 100px; border-width: 1px;",
+//   "width: 200px; height: 100px; border-radius: 100px / 50px; ",
+//   "width: 150px; height: 100px; transform: skew(20deg)",
+// ];
+
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+// }
+
+// function randomither(max) {
+//   return Math.floor(Math.random() * max);
+// }
+// const changeBox = function () {
+//     box.style.cssText = forms[randomither(forms.length)];
+//     box.style.backgroundColor = getRandomHexColor();
+//     box.style.position = "absolute";
+//     box.style.top = `${randomither(100)}%`;
+//     box.style.left = `${randomither(100)}%`;
+// }
+
+
+// const box = document.createElement("div");
+
+// changeBox();
+// document.body.append(box);
+
+
+// box.addEventListener("click", changeBox);
+
+// ********************************************************************
+
+
+/*
+Завдання 6
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
+*/
+
+const btn = document.querySelector("#double");
+const items = document.querySelectorAll(".listItem");
+
+btn.addEventListener("click", doubleBtn);
+
+function doubleBtn() {
+    items.forEach(item => item.textContent *= 2);
+    
 }
+
