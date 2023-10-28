@@ -4,7 +4,6 @@
 // Парним лі вказати жовтий фон, непарним синій
 // Використовуй createElement
 
-
 // const list = document.createElement("ol");
 // const buttonAdd = document.createElement("button");
 // const buttonRemove = document.createElement("button");
@@ -86,17 +85,14 @@
 //     box.style.left = `${randomither(100)}%`;
 // }
 
-
 // const box = document.createElement("div");
 
 // changeBox();
 // document.body.append(box);
 
-
 // box.addEventListener("click", changeBox);
 
 // ********************************************************************
-
 
 /*
 Завдання 6
@@ -104,13 +100,67 @@
 у кожному елементі списку у 2 рази
 */
 
-const btn = document.querySelector("#double");
-const items = document.querySelectorAll(".listItem");
+// const btn = document.querySelector("#double");
+// const items = document.querySelectorAll(".listItem");
 
-btn.addEventListener("click", doubleBtn);
+// btn.addEventListener("click", doubleBtn);
 
-function doubleBtn() {
-    items.forEach(item => item.textContent *= 2);
-    
-}
+// function doubleBtn() {
+//     items.forEach(item => item.textContent *= 2);
 
+// }
+// !===============
+// Створити червоний квадрат розміром 50 на 50 рх
+// Додати кнопку "Зменшити", яка робить квадрат менше на 10 пікселів
+// Додати кнопку "Збільшити", яка робить його більше на 10 пікселів.
+
+// let size = 50;
+// const markup = `<div class="box" style="background-color: tomato; width: ${size}px; height: ${size}px;"></div>
+//   <button class="increment" type="button">Збільшити</button>
+//   <button class="decrement" type="button">Зменшити</button>`;
+// document.body.insertAdjacentHTML("afterbegin", markup);
+
+// const boxRef = document.querySelector(".box");
+// const btnIncrement = document.querySelector(".increment");
+// const btnDecrement = document.querySelector(".decrement");
+// btnDecrement.addEventListener("click", onDecrement);
+// btnIncrement.addEventListener("click", onIncrement);
+
+// function onDecrement() {
+//     if (size === 10) return;
+//     size -= 10;
+//     boxRef.style.width = `${size}px`;
+//     boxRef.style.height = `${size}px`;
+// }
+
+// function onIncrement() {
+//     size += 10;
+//     boxRef.style.width = `${size}px`;
+//     boxRef.style.height = `${size}px`;
+// }
+// !================
+// Завдання 16
+//  При натисканні на будь-який рядок у табличці відобразіть
+//  повідомлення з назвою продукту та його ціною.
+//  "Ви вибрали <product> за <price>".
+
+// const table = document.querySelector("#productTable");
+// const info = document.querySelector("#productDetails");
+
+// table.addEventListener("click", onTable);
+
+// function onTable(event) {
+//     if (event.target.nodeName !== "TD") return;
+//     const parent = event.target.parentNode;
+//     const product = parent.firstElementChild.textContent;
+//     const price = parent.lastElementChild.textContent;
+//     info.textContent = `Ви вибрали ${product} за ${price}`;
+// }
+
+// !=======================HomeWork+++++++++++++++++++++++++++++++
+/*
+Завдання 8
+При натисканні на кожну з кнопок підсумовуються значення з data-атрибутів.
+За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
+інформацією про те, яка кнопка була натиснута скільки разів.
+*/
