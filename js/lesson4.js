@@ -164,3 +164,19 @@
 За натисканням на кнопку "Вивести результат" виводиться сума значення, а також статистика з
 інформацією про те, яка кнопка була натиснута скільки разів.
 */
+const sumList = document.querySelector(".statList");
+const result = document.querySelector("#resultButton");
+ 
+sumList.addEventListener("click", onSumBtn);
+result.addEventListener("click", onResultBtn);
+
+
+function onSumBtn() {
+    console.log("sumList");
+    
+}
+
+function onResultBtn() {
+    console.log("result");
+    
+}
